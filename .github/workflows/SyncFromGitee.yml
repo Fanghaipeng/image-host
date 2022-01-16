@@ -1,20 +1,20 @@
-name: SyncFromGitee
-on: 
- schedule: 
- # 每10分钟同步一次 
- - cron: '*/10 * * * *' 
-jobs: 
-    build: 
-      runs-on: ubuntu-latest 
-      steps: 
-       - name: Mirror the gitee repos to github. 
-         uses: Yikun/hub-mirror-action@master 
-         with: 
-           src: gitee/Fanghaipeng
-           dst: github/Fanghaipeng
-           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }} 
-           dst_token: ${{ secrets.GITEE_TOKEN }} 
-           static_list: "image-host" 
-           force_update: true 
-           debug: true 
+# name: SyncFromGitee
+# on: 
+#  schedule: 
+#  # 每10分钟同步一次 
+#  - cron: '*/10 * * * *' 
+# jobs: 
+#     build: 
+#       runs-on: ubuntu-latest 
+#       steps: 
+#        - name: Mirror the gitee repos to github. 
+#          uses: Yikun/hub-mirror-action@master 
+#          with: 
+#            src: gitee/Fanghaipeng
+#            dst: github/Fanghaipeng
+#            dst_key: ${{ secrets.GITEE_PRIVATE_KEY }} 
+#            dst_token: ${{ secrets.GITEE_TOKEN }} 
+#            static_list: "image-host" 
+#            force_update: true 
+#            debug: true 
 
